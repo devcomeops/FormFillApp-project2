@@ -1,39 +1,41 @@
-<form action="action_page.php">
-  <div class="container">
-    <h1> Vivek and Ullas DevOps Platform For Student Registration!</h1>
-    <p>Please fill in this form!</p>
-    <hr>
-    <br>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import="java.util.Random" %>
+<%
+    // Generate a random color in HEX format
+    String[] colors = {"#FF5733", "#33FF57", "#3357FF", "#FF33A1", "#FFDA33", "#A133FF"};
+    Random random = new Random();
+    String color = colors[random.nextInt(colors.length)];
+    pageContext.setAttribute("bgColor", color);
+%>
 
-    <label for="name"><b>Name</b></label>
-    <input type="text" placeholder="Enter Name" name="name" id="name" required>
-    <br>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Color Page</title>
+    <style>
+        body {
+            background-color: ${bgColor}; /* Set background color from the server-side */
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+        }
+    </style>
+    <script type="text/javascript">
+        // If you want to refresh the background color without refreshing the whole page, you can use this:
+        function changeBackgroundColor() {
+            var colors = ["#FF5733", "#33FF57", "#3357FF", "#FF33A1", "#FFDA33", "#A133FF"];
+            var randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</head>
+<body onload="changeBackgroundColor()"> <!-- You can remove this if you want the page to just load with the server-generated color -->
+    <h1>Welcome to the Color Changing Page!</h1>
+    <p>The background color will change every time the page is refreshed.</p>
+</body>
+</html>
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
-    <br>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-    <br>
-
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-    <br>
-
-    <label for="aadhar"><b>Aadhar Number</b></label>
-    <input type="text" placeholder="Enter Aadhar Number" name="aadhar" id="aadhar" required>
-    <br>
-
-    <label for="Pan Card Info"><b>PAN Number</b></label>
-    <input type="text" placeholder="Enter PAN Number" name="PAN" id="PAN" required>
-    <br>
-
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <button type="submit" class="registerbtn">Register</button>
-  </div>
-
-  <div class="container signin">
-    <p>Already have an account? <a href="#">Sign in</a>.</p>
-  </div>
-</form>
