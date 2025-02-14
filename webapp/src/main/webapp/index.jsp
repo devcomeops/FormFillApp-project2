@@ -1,39 +1,14 @@
-<form action="action_page.php">
-  <div class="container">
-    <h1> Vivek and Ullas DevOps Platform For Student Registration!</h1>
-    <p>Please fill in this form!</p>
-    <hr>
-    <br>
+<!DOCTYPE html>
+<html>
+<head><title>First JSP</title></head>
+<body>
+<% double num = Math.random();  // [0.0, 1.0)
+   if (num > 0.95) { %>
+      <h2>You'll have a luck day!</h2><p>(<%= num %>)</p>
+<% } else { %>
+      <h2>Well, life goes on ... </h2><p>(<%= num %>)</p>
+<% } %>
+   <a href="<%= request.getRequestURI() %>"><h3>Try Again</h3></a>
+</body>
+</html>
 
-    <label for="name"><b>Name</b></label>
-    <input type="text" placeholder="Enter Name" name="name" id="name" required>
-    <br>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
-    <br>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-    <br>
-
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-    <br>
-
-    <label for="aadhar"><b>Aadhar Number</b></label>
-    <input type="text" placeholder="Enter Aadhar Number" name="aadhar" id="aadhar" required>
-    <br>
-
-    <label for="Pan Card Info"><b>PAN Number</b></label>
-    <input type="text" placeholder="Enter PAN Number" name="PAN" id="PAN" required>
-    <br>
-
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <button type="submit" class="registerbtn">Register</button>
-  </div>
-
-  <div class="container signin">
-    <p>Already have an account? <a href="#">Sign in</a>.</p>
-  </div>
-</form>
