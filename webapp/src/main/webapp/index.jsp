@@ -1,118 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    
-    <!-- External CSS -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        
-        .login-container {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-        }
+<form action="action_page.php">
+  <div class="container">
+    <h1> Vivek and Ullas DevOps Platform For Student Registration!</h1>
+    <p>Please fill in this form!</p>
+    <hr>
+    <br>
 
-        .login-container:hover {
-            transform: scale(1.05);
-        }
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" id="name" required>
+    <br>
 
-        h2 {
-            color: #333;
-        }
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    <br>
 
-        .input-field {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            outline: none;
-            transition: border-color 0.3s ease-in-out;
-        }
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <br>
 
-        .input-field:focus {
-            border-color: #2575fc;
-        }
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <br>
 
-        .submit-btn {
-            background-color: #2575fc;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            width: 100%;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+    <label for="aadhar"><b>Aadhar Number</b></label>
+    <input type="text" placeholder="Enter Aadhar Number" name="aadhar" id="aadhar" required>
+    <br>
 
-        .submit-btn:hover {
-            background-color: #6a11cb;
-        }
+    <label for="Pan Card Info"><b>PAN Number</b></label>
+    <input type="text" placeholder="Enter PAN Number" name="PAN" id="PAN" required>
+    <br>
 
-        .error {
-            color: red;
-            font-size: 14px;
-        }
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
 
-        .success {
-            color: green;
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="login-container">
-        <h2>Login</h2>
-        
-        <!-- Login Form -->
-        <form action="login.jsp" method="post">
-            <input type="text" name="username" class="input-field" placeholder="Enter Username" required><br>
-            <input type="password" name="password" class="input-field" placeholder="Enter Password" required><br>
-            <button type="submit" class="submit-btn">Login</button>
-        </form>
-
-        <!-- Error/Success Message Display -->
-        <div id="message"></div>
-    </div>
-
-    <!-- Optional JavaScript for effects -->
-    <script>
-        // Example: Add dynamic effects or alert messages
-        const form = document.querySelector("form");
-
-        form.addEventListener("submit", function (e) {
-            const username = document.querySelector('input[name="username"]').value;
-            const password = document.querySelector('input[name="password"]').value;
-
-            // Example validation check (you can add more complex logic)
-            if (username === "" || password === "") {
-                e.preventDefault();  // Prevent form submission
-                document.getElementById('message').innerHTML = "<p class='error'>Please fill in both fields!</p>";
-            } else {
-                document.getElementById('message').innerHTML = "<p class='success'>Form submitted successfully!</p>";
-            }
-        });
-    </script>
-
-</body>
-</html>
-
+  <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
+</form>
