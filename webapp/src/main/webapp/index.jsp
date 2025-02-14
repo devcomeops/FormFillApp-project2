@@ -1,16 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
+            color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -18,66 +16,61 @@
             margin: 0;
         }
         .login-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 300px;
-        }
-        .login-container h2 {
             text-align: center;
         }
-        .form-group {
-            margin-bottom: 15px;
+        .login-container h2 {
+            color: #4CAF50;
         }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input {
+        input[type="text"], input[type="password"] {
             width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
-        .form-group input[type="submit"] {
+        input[type="submit"] {
             background-color: #4CAF50;
             color: white;
             border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
         }
-        .form-group input[type="submit"]:hover {
+        input[type="submit"]:hover {
             background-color: #45a049;
         }
-        .error-message {
-            color: red;
-            text-align: center;
+        .forgot-password {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .forgot-password a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .forgot-password a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-
     <div class="login-container">
         <h2>Login</h2>
-        
-        <form action="login" method="post">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required />
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required />
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Login" />
-            </div>
-            <c:if test="${not empty errorMessage}">
-                <div class="error-message">${errorMessage}</div>
-            </c:if>
+        <form action="login.jsp" method="POST">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="submit" value="Login">
         </form>
+        <div class="forgot-password">
+            <a href="#">Forgot password?</a>
+        </div>
     </div>
-
 </body>
 </html>
 
