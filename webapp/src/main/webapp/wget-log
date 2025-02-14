@@ -1,15 +1,0 @@
---2025-02-14 04:58:47--  https://www.google.com/imgres?q=devops%20cartoon%20images%20page
-Resolving www.google.com (www.google.com)... 142.251.111.106, 142.251.111.104, 142.251.111.105, ...
-Connecting to www.google.com (www.google.com)|142.251.111.106|:443... connected.
-HTTP request sent, awaiting response... 301 Moved Permanently
-Location: https://www.google.com/imghp [following]
---2025-02-14 04:58:47--  https://www.google.com/imghp
-Reusing existing connection to www.google.com:443.
-HTTP request sent, awaiting response... 200 OK
-Length: unspecified [text/html]
-Saving to: ‘imgres?q=devops cartoon images page’
-
-imgres?q=devops cartoon images page                      [<=>                                                                                                                   ]       0  --.-KB/s               imgres?q=devops cartoon images page                      [ <=>                                                                                                                  ]  17.30K  --.-KB/s    in 0s      
-
-2025-02-14 04:58:47 (131 MB/s) - ‘imgres?q=devops cartoon images page’ saved [17718]
-
