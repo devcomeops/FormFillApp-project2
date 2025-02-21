@@ -1,115 +1,76 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vivek and Ullas DevOps Platform for Student Registration</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 500px;
-      margin: 50px auto;
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      text-align: center;
-      color: #4CAF50;
-    }
-
-    p {
-      text-align: center;
-      color: #555;
-    }
-
-    label {
-      font-weight: bold;
-      color: #333;
-    }
-
-    input[type="text"], input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-
-    input[type="text"]:focus, input[type="password"]:focus {
-      border-color: #4CAF50;
-    }
-
-    .registerbtn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 14px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      width: 100%;
-      font-size: 16px;
-    }
-
-    .registerbtn:hover {
-      background-color: #45a049;
-    }
-
-    .container a {
-      color: #4CAF50;
-    }
-
-    .container a:hover {
-      text-decoration: underline;
-    }
-
-    .signin {
-      text-align: center;
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h2 {
+            color: #4CAF50;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .forgot-password {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .forgot-password a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-
-  <form action="action_page.php" method="POST">
-    <div class="container">
-      <h1>Vivek and Ullas DevOps Platform for Student Registration!</h1>
-      <p>Please fill in this form to register.</p>
-      <hr>
-
-      <label for="name"><b>Name</b></label>
-      <input type="text" placeholder="Enter Name" name="name" id="name" required>
-
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" id="email" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-
-      <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-
-      <label for="aadhar"><b>Aadhar Number</b></label>
-      <input type="text" placeholder="Enter Aadhar Number" name="aadhar" id="aadhar" required>
-
-      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-      <button type="submit" class="registerbtn">Register</button>
+    <div class="login-container">
+        <h2>Login to Vivek's Site </h2>
+        <form action="login.jsp" method="POST">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="submit" value="Login">
+        </form>
+        <div class="forgot-password">
+            <a href="#">Forgot password?</a>
+        </div>
     </div>
-
-    <div class="container signin">
-      <p>Already have an account? <a href="#">Sign in</a>.</p>
-    </div>
-  </form>
-
 </body>
 </html>
 
